@@ -1,6 +1,8 @@
 # dtu-hack
  <h1>INSTALLATIONS TO BE DONE</1h>
  <br>
+  <br>
+   <br>
  npm install --legacy-peer-deps
   <br>
  npm i @fortawesome/free-brands-svg-icons --legacy-peer-deps
@@ -12,8 +14,14 @@
  npm install -g sass
   <br>
  npm install node-sass --legacy-peer-deps
+  <br>
  npm i animate.css --legacy-peer-deps
+  <br>
  npm i loaders.css --legacy-peer-deps
+  <br>
  npm i react-leaflet --legacy-peer-deps
+  <br>
  npm i react-leaflet --legacy-peer-deps
+  <br>
  npm install sass-loader sass webpack --legacy-peer-deps
+  <br>
