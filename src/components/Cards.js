@@ -16,12 +16,13 @@ function Cards() {
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
-                        <CardItem
-                            src={pic1}
-                            text="Dubai"
-                            label='Adventure'
-                            path='/services'
-                        />
+                    <CardItem
+                    src={pic1}
+                    text={<a href="http://127.0.0.1:5500/Supply_Chain_Management%20/Web3/index.html">Authenticate Website urls and find whether they are fishy or Safe</a>}
+                    label='Adventure'
+                    >
+                    </CardItem>
+
                         <CardItem
                             src={pic2}
                             text="INDIA"
