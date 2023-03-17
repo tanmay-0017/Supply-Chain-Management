@@ -5,17 +5,17 @@ function CardItem(props) {
     const { src, text, label, path } = props;
     return (
         <li className='cards__item'>
-            <Link className='cards__item__link' to={path}>
+            <a className='cards_item_link' href={path}>
 
-                <figure className='cards__item__pic-wrap' data-category={label}>
-                    <img src={src} className='cards__item__img' alt='dubai' />
+                <figure className='cards_item_pic-wrap' data-category={label}>
+                    <img src={src} className='cards_item_img' alt='dubai' />
 
                 </figure>
 
-                <div className='cards__item__info'>
-                    <h5 className='cards__item__text'>{props.text}</h5>
+                <div className='cards_item_info'>
+                    <h5 className='cards_item_text'>{props.text}</h5>
                 </div>
-            </Link>
+            </a>
 
         </li>
     )
