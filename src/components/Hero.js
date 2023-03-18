@@ -10,24 +10,24 @@ function Hero() {
 
 
             <video src={video} autoPlay loop muted></video>
-            <h1>Title  bhej
+            <h1>CARGO
 
                 <Typical
                     loop={Infinity}
                     wrapper='b'
                     steps={[
-                        ' please',
+                        'HIVE',
                         1000,
-                        ' jaldi',
+                        '',
                         1000,
-                        ' bhej de',
+                        'HIVE',
                         1000
 
                     ]}
                 />
             </h1>
 
-            <p>What are you waiting for?</p>
+            <p>Simplify your supply chain, amplify your success</p>
             <div className='hero-btns'>
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>GET STARTED</Button>
                 <br></br>
