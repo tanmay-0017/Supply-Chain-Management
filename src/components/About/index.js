@@ -13,8 +13,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.css'
 import { faIndustry, faPlaneDeparture, faShip, faTrainSubway, faTruckField, faWarehouse } from '@fortawesome/free-solid-svg-icons'
 import video2 from '../../videos/video1.mp4'
-import video3 from '../../videos/try.mp4'
-import video4 from '../../videos/cargo1.mp4'
 import { Link } from 'react-router-dom'
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
