@@ -9,10 +9,15 @@ async function createProduct() {
      const tx = await contract.methods.createProduct(name, manufacturer, amount, quantity).send({ from: accounts[0] });
     console.log(tx);
   }
+
+
+
+
    async function addHistory() {
     const accounts = await ethereum.request({
       method: "eth_requestAccounts",
     });
+
     const now = new Date();
     const formattedDateTime = now.toLocaleString('en-GB' , {
     day: '2-digit',
@@ -25,7 +30,9 @@ async function createProduct() {
  
  
     const productId = document.getElementById("productId").value;
-     const tx = await contract.methods.addHistory(productId, "The History was added on "+formattedDateTime+" "+"and given to a").send({ from: accounts[0] });
+    const history = document.getElementById("history").value;
+
+    const tx = await contract.methods.addHistory(productId, "The History was added on "+formattedDateTime+" "+"and "+history).send({ from: accounts[0] });
     console.log(tx);
   }
  
@@ -53,8 +60,9 @@ async function createProduct() {
  
  
    for (let i = 0; i < result[0].length; i++) {
-      html += "<tr><td>" + result[0][i] + "</td><td>" + result[1][i] + "</td><td>" + result[2][i] + "</td></tr>"+result[3][i] + "</td></tr>"+result[4][i] + "</td></tr>";
-   }
+    html += "<tr><td>" + result[0][i] + "</td><td>" + result[1][i] + "</td><td>" + result[2][i] + "</td><td>" + result[3][i] + "</td><td>" + result[4][i] + "</td></tr>";
+}
+
  
  
    html += "</tbody></table>";
@@ -176,6 +184,39 @@ async function createProduct() {
  
  
  
+ 
+
+
+
+
+  async function createbills() {
+    const doc = new jsPDF();
+    const productId = document.getElementById("product-id1").value;
+    const accounts = await ethereum.request({
+      method: "eth_requestAccounts",
+    });
+    var rows = [];
+    const result = await contract.methods.getProduct(productId).call({ from: accounts[0] });
+    const totalAmount = result[2];
+    const quantity = result[3];
+    const unitPrice = totalAmount / quantity;
+    var amount = result[2].toString();
+    rows.push([result[0], quantity, unitPrice]);
+     doc.text("Bill Details", 10, 10);
+    doc.text("Manufacturer Name: " + result[1], 10, 20);
+    doc.autoTable({
+      startY: 30,
+      head: [["Product Name", "Quantity", "Unit Price"]],
+      body: rows,
+      theme: "grid",
+    });
+    doc.text(
+      "Total Amount: " + totalAmount,
+      10,
+      doc.autoTable.previous.finalY + 10
+    );
+    doc.save("bill.pdf");
+  }
  
  
  
