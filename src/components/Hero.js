@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from './Button'
 import './Hero.css';
-import video from '../videos/video.mp4';
 import videos from '../videos/cargo1.mp4';
 import Typical from 'react-typical'
 function Hero() {
