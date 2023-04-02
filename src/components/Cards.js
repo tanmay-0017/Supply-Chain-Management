@@ -19,7 +19,7 @@ function Cards() {
                     <ul className='cards__items'>
                     <CardItem
                     src={pic1}
-                    text={<a href="http://127.0.0.1:5500/Supply_Chain_Management%20/Web3/index.html">Product Lineage Tracking</a>}
+                    text={<a href="https://6428ed806bcf2c26ed507ccb--timely-lolly-3f33f7.netlify.app/">Product Lineage Tracking</a>}
                     label='Supply chain visibility'
                     >
                     </CardItem>
