@@ -30,4 +30,4 @@
 
 
 
-<p>This  website  is still being worked upon but is 98% ready to use  for upcoming project . This is a animation based website having soothing animations which give user a beautiful experience.</p>
+<p>This  website  is still being worked upon but is almost ready to use  for upcoming project . This is a animation based website having soothing animations which give user a beautiful experience.</p>
